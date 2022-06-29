@@ -121,6 +121,7 @@ body {
 
 .info-block-label img {
   width: 1.5em;
+  border-radius: 50%;
 }
 
 .info-block-label span {
