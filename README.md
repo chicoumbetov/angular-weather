@@ -1,5 +1,7 @@
 # WeatherApp
 
+Deployment on chicoumbetov.github.io/angular-weather
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
@@ -41,6 +43,8 @@ DEPLOY TO GITHUB PAGES:
 https://www.syncfusion.com/blogs/post/easy-steps-to-host-an-angular-app-in-github-pages.aspx
 
 ng add angular-cli-ghpages
+
+ng build --output-path docs --base-href /angular-weather/
 
 ng deploy --base-href=/angular-weather/
 
