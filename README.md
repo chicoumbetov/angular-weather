@@ -14,14 +14,24 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+Deployement to netlify
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Run npm install netlify netlify-cli -g && netlify login
+   npm install -g netlify-cli
 
-## Running end-to-end tests
+Refresh with Redirects
+To make sure that your routes work (refreshes, etc. handled by the Angular router) you’ll want to add some redirect logic. One of the most straightforward ways to do this is by setting redirects in your Netlify configuration file, netlify.toml, mentioned above. This is what that file will be like:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. create netlify.toml file;
+3. Paste text which exists now in this file;
 
-## Further help
+[build]
+publish = "dist/anglify"
+command = "ng build --prod"
+[[redirects]]
+from = "/\*"
+to = "/index.html"
+status = 200
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. netlify build
+5. netlify deploy
