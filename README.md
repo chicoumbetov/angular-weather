@@ -35,3 +35,13 @@ status = 200
 
 4. netlify build
 5. netlify deploy
+
+DEPLOY TO GITHUB PAGES:
+
+https://www.syncfusion.com/blogs/post/easy-steps-to-host-an-angular-app-in-github-pages.aspx
+
+ng add angular-cli-ghpages
+
+ng deploy --base-href=/angular-weather/
+
+docs folder is like build folder to deploy
